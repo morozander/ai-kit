@@ -1,0 +1,35 @@
+# Copy into result/<trip-slug>/trip-params.yaml and fill. Do not invent values.
+
+slug: null
+name: null
+start_date: null # YYYY-MM-DD
+country_or_region: null
+season: null # summer | shoulder | winter
+region_terrain: null # alpine | forest | off-trail | desert | arctic
+route_style: null # maintained-trail | mixed | off-trail
+duration_days: null
+distance_km: null
+elevation_gain_m: null # total trip ascent
+daily_elevation_gain_m: null # only if known
+expected_daily_hours: null
+off_trail: null # true | false
+known_river_crossings: []
+known_terrain_obstacles: []
+night_travel_planned: null # true | false
+group_size: null
+resupply_available: null # true | false
+water_availability: null # frequent | sparse | unreliable
+longest_dry_water_interval_km: null
+water_source_notes: []
+expected_overnight_low_c: null
+weather_notes: null
+rain_exposure: null # low | moderate | sustained
+bug_pressure: null # low | moderate | high
+campsite_or_shelter_constraints: null
+stove_fire_restrictions: null
+waste_disposal_rules: null
+restricted_area_or_border: null # none | border-strip | protected-area | other
+permits_or_access_status: null # not-needed | unverified | pending | verified
+navigation_notes: null
+budget_tier: null # low | mid | unconstrained
+region_notes: null # lawful access constraints only; never an evasion route

@@ -1,0 +1,43 @@
+# Copy into result/<trip-slug>/hiker-profile.yaml and fill. Do not invent values.
+
+personal:
+  name: null
+  age: null
+  weight_kg: null
+  height_cm: null
+  sex: null # m | f | unspecified
+  fitness_level: null # beginner | intermediate | advanced
+  known_limitations: []
+
+experience:
+  years_hiking: null
+  longest_trip_days: null
+  off_trail_experience: null # true | false
+  cold_weather_experience: null # true | false
+  offline_navigation_experience: null # none | basic | competent
+  map_compass_experience: null # none | basic | competent
+  river_crossing_experience: null # none | basic | competent
+
+preferences:
+  pack_philosophy: null # ultralight | traditional | comfort-first
+  language: auto
+  dietary_constraints: []
+  food_gi_notes: []
+
+footcare:
+  recurring_hotspots: []
+  footwear_fit_notes: null
+  tested_sock_system: null
+  tested_insole_notes: null
+
+gear_owned: []
+  # - name: "Sawyer Squeeze"
+  #   weight_g: 85
+  #   condition: good # new | good | worn | repair-needed
+  #   tested: true
+  #   notes: "with 1L dirty bag"
+
+training:
+  lthr_bpm: null
+  resting_hr_bpm: null
+  weekly_training_volume: null

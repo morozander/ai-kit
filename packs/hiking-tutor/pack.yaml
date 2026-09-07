@@ -1,0 +1,30 @@
+name: hiking-tutor
+description: IDE hiking coach domain pack — skills, specialist agents, slash commands, and profile schemas. Pair with a project AGENTS.md and result/ artifacts.
+skills:
+  - camp-hygiene-and-sanitation
+  - footcare
+  - gear-selection
+  - hydration-and-water-treatment
+  - navigation-and-permits
+  - nutrition-planning
+  - packlist-generator
+  - risk-and-safety
+  - training-plan
+agents:
+  - hiking-tutor
+  - gear-advisor
+  - nutrition-coach
+  - training-coach
+  - safety-planner
+commands:
+  - setup-profile
+  - plan-trip
+  - packlist
+  - nutrition-plan
+  - gear-check
+  - training-plan
+  - risk-assessment
+  - navigation-plan
+  - trip-review
+extra_dirs:
+  - profile

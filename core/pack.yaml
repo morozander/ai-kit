@@ -1,0 +1,18 @@
+name: core
+description: Shared software workflow skills, planning/verification agents, and git slash commands.
+skills:
+  - git-workflow
+  - brainstorming
+  - writing-plans
+  - systematic-debugging
+  - meta-task-observer
+agents:
+  - requirements-planner
+  - plan-verifier
+commands:
+  - commit
+  - create-branch
+  - create-pr
+  - brainstorm
+  - plan
+  - code-review

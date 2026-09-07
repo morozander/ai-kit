@@ -1,0 +1,39 @@
+# Software App — IDE guide
+
+Software project. Document install/dev/build/test/lint below when known.
+
+This file is the **single source of truth** for root context.
+
+- **Cursor** and **Codex** read `AGENTS.md`. `.cursorrules` is a symlink to this file.
+- **Claude Code** reads `CLAUDE.md`, a symlink to this file.
+
+Edit **this file only** for root instructions. Recreate adapters with `sh scripts/link.sh`.
+
+## Your role
+
+Fill in: stack, architecture pointers, and coding conventions. Prefer installing `core` and `software-frontend` packs from ai-kit over pasting skill bodies here.
+
+## Runtime
+
+```bash
+# install / dev / build / test / lint — fill in
+```
+
+## File map
+
+```
+AGENTS.md
+skills/<name>/SKILL.md
+agents/<name>.md
+commands/<name>.md
+```
+
+## Hard limits
+
+1. Do not replace `CLAUDE.md` or `.cursorrules` with real copies.
+2. Do not commit or push unless the user asks.
+3. Do not invent a stack absent from this file.
+
+## Recreating adapters
+
+`sh scripts/link.sh`

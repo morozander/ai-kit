@@ -1,0 +1,11 @@
+name: software-frontend
+description: React-oriented skills and agents for SPA frontends (best practices, safe UI refactor, unit tests, implementor/reviewer/refactor planner).
+skills:
+  - react-best-practices
+  - safe-ui-refactoring
+  - writing-frontend-unit-tests
+agents:
+  - implementor
+  - react-reviewer
+  - refactoring-planner
+commands: []
