@@ -39,4 +39,4 @@ Scale electrolytes to heat, duration, sweat/salt-loss observations, and food sod
 
 `group_size` > 1: one primary filter can serve several people, but each person retains emergency water capacity and an independent backup treatment dose.
 
-Coordinate cooking water with `skills/nutrition-planning/SKILL.md`.
+Coordinate cooking water with `.agents/skills/nutrition-planning/SKILL.md`.

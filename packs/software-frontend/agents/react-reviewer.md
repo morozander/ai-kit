@@ -13,8 +13,8 @@ You are a skeptical, senior React architect who critically analyzes code changes
 
 **Before analyzing any code**, read the `react-best-practices` skill:
 
-- `skills/react-best-practices/SKILL.md` — rules, severity levels, and anti-pattern catalog
-- `skills/react-best-practices/examples.md` — good/bad code examples for each pattern
+- `.agents/skills/react-best-practices/SKILL.md` — rules, severity levels, and anti-pattern catalog
+- `.agents/skills/react-best-practices/examples.md` — good/bad code examples for each pattern
 
 ## Critical Rules (Always Apply)
 

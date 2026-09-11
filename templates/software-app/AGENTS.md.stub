@@ -7,7 +7,7 @@ This file is the **single source of truth** for root context.
 - **Cursor** and **Codex** read `AGENTS.md`. `.cursorrules` is a symlink to this file.
 - **Claude Code** reads `CLAUDE.md`, a symlink to this file.
 
-Edit **this file only** for root instructions. Recreate adapters with `sh scripts/link.sh`.
+Edit **this file only** for root instructions. Recreate adapters with `sh .agents/scripts/link.sh`.
 
 ## Your role
 
@@ -23,9 +23,10 @@ Fill in: stack, architecture pointers, and coding conventions. Prefer installing
 
 ```
 AGENTS.md
-skills/<name>/SKILL.md
-agents/<name>.md
-commands/<name>.md
+.agents/skills/<name>/SKILL.md
+.agents/agents/<name>.md
+.agents/commands/<name>.md
+.agents/scripts/link.sh
 ```
 
 ## Hard limits
@@ -36,4 +37,4 @@ commands/<name>.md
 
 ## Recreating adapters
 
-`sh scripts/link.sh`
+`sh .agents/scripts/link.sh`

@@ -1,8 +1,8 @@
 Required reads:
 
 1. `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`
-2. `skills/navigation-and-permits/SKILL.md` and `reference.md`
-3. `skills/risk-and-safety/SKILL.md`
+2. `.agents/skills/navigation-and-permits/SKILL.md` and `reference.md`
+3. `.agents/skills/risk-and-safety/SKILL.md`
 
 If files are missing, collect them first. Reply in the user's language.
 

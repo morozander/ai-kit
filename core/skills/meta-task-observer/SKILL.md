@@ -275,7 +275,7 @@ If there are no OPEN observations and all principles are propagated, skip
 the review, update the timestamp, and inform the user briefly.
 
 **Step 2 — Inventory all skills.** Use the skill listing from the system
-prompt or scan `skills/*/SKILL.md`. Only update custom skills.
+prompt or scan `.agents/skills/*/SKILL.md`. Only update custom skills.
 
 **Step 3 — Cross-check.** For each OPEN observation, evaluate relevance
 to each skill. Don't rely solely on the observation's "Skill" field —

@@ -4,7 +4,7 @@ Create a GitHub Pull Request with a concise, file-specific description.
 
 ## Prerequisites
 
-Read the git-workflow skill at `skills/git-workflow/SKILL.md` for PR title format and description conventions.
+Read the git-workflow skill at `.agents/skills/git-workflow/SKILL.md` for PR title format and description conventions.
 
 ## Instructions
 

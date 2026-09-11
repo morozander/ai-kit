@@ -1,9 +1,9 @@
 Required reads:
 
 1. `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`
-2. `agents/nutrition-coach.md`
-3. `skills/nutrition-planning/SKILL.md` and `skills/nutrition-planning/reference.md`
-4. `skills/hydration-and-water-treatment/SKILL.md` if meals need rehydration water
+2. `.agents/agents/nutrition-coach.md`
+3. `.agents/skills/nutrition-planning/SKILL.md` and `.agents/skills/nutrition-planning/reference.md`
+4. `.agents/skills/hydration-and-water-treatment/SKILL.md` if meals need rehydration water
 
 If files are missing, collect them via `/setup-profile` / `/plan-trip`. Reply in the user's language. Do not prescribe medical diets.
 

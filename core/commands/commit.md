@@ -4,7 +4,7 @@ Generate a commit message based on the current staged changes.
 
 ## Prerequisites
 
-Read the git-workflow skill at `skills/git-workflow/SKILL.md` for commit format, types, and conventions.
+Read the git-workflow skill at `.agents/skills/git-workflow/SKILL.md` for commit format, types, and conventions.
 
 ## Critical Rules
 

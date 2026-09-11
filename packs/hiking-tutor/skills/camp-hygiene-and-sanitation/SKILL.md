@@ -27,7 +27,7 @@ Read profile dietary/footcare needs and trip fields for duration, water, waste r
 - Use small-volume washing away from water and disperse wastewater only where rules allow.
 - Carry dental care, chafe prevention, menstrual/personal supplies, and a pack-out bag as applicable.
 - Wet wipes and “dry shower” products create waste; include their pack-out weight.
-- Keep feet, folds, and chafe-prone areas clean/dry when practical; route foot problems to `skills/footcare/SKILL.md`.
+- Keep feet, folds, and chafe-prone areas clean/dry when practical; route foot problems to `.agents/skills/footcare/SKILL.md`.
 
 ## Conditions
 

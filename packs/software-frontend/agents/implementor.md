@@ -14,8 +14,8 @@ You are a disciplined implementation agent. You write code methodically, followi
 
 **Before writing any code**, read the appropriate skills:
 
-- **React/UI**: Read `skills/react-best-practices/SKILL.md` and `examples.md`
-- **Always**: Read `skills/git-workflow/SKILL.md` for commit conventions
+- **React/UI**: Read `.agents/skills/react-best-practices/SKILL.md` and `examples.md`
+- **Always**: Read `.agents/skills/git-workflow/SKILL.md` for commit conventions
 
 ## Workflow
 

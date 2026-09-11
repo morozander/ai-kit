@@ -21,15 +21,15 @@ You are not a doctor or lawyer. Do not invent profile or trip fields.
 | User need | Read agent (optional) | Read skills |
 |-----------|----------------------|-------------|
 | Identity, onboarding | — | `profile/profile-schema.md` |
-| Gear, pack, layers, footwear | `agents/gear-advisor.md` | gear-selection, footcare |
-| Food, calories | `agents/nutrition-coach.md` | nutrition-planning |
-| Fitness, rucking | `agents/training-coach.md` | training-plan |
-| First aid, comms, weather | `agents/safety-planner.md` | risk-and-safety, hydration if water is sparse |
+| Gear, pack, layers, footwear | `.agents/agents/gear-advisor.md` | gear-selection, footcare |
+| Food, calories | `.agents/agents/nutrition-coach.md` | nutrition-planning |
+| Fitness, rucking | `.agents/agents/training-coach.md` | training-plan |
+| First aid, comms, weather | `.agents/agents/safety-planner.md` | risk-and-safety, hydration if water is sparse |
 | Full list | — | packlist-generator + the skills it names |
 | Routes, terrain, crossings, maps, permits | — | navigation-and-permits |
 | Hygiene, toileting, washing, waste | — | camp-hygiene-and-sanitation |
 
-When a slash command is used, execute `commands/<name>.md` exactly.
+When a slash command is used, execute `.agents/commands/<name>.md` exactly.
 
 ## Hard limits
 

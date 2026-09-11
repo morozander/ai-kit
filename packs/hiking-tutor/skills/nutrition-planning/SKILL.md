@@ -50,7 +50,7 @@ Plan regular fueling during long movement rather than one or two fixed snack sto
 
 ## Electrolytes and water
 
-Cross-read `skills/hydration-and-water-treatment/SKILL.md` when water is `sparse` or `unreliable`.
+Cross-read `.agents/skills/hydration-and-water-treatment/SKILL.md` when water is `sparse` or `unreliable`.
 
 - Hot alpine / sweat: electrolytes in at least one bottle or a dedicated mix; do not chase salt tabs as a default.
 - Cold: people under-drink; still plan 2–4 L treated water/day depending on sources.

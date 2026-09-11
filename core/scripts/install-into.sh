@@ -40,10 +40,18 @@ esac
 
 [ -f "$SRC/pack.yaml" ] || { echo "Missing pack.yaml in $SRC" >&2; exit 1; }
 
+# skills | agents | commands → .agents/<kind>; profile and other extras → project root
 copy_tree() {
-  kind="$1"   # skills | agents | commands | profile
+  kind="$1"
+  under_agents="$2"   # 1 = install under .agents/, 0 = project root
   src_dir="$SRC/$kind"
-  dst_dir="$TARGET/$kind"
+  if [ "$under_agents" -eq 1 ]; then
+    dst_dir="$TARGET/.agents/$kind"
+    label=".agents/$kind"
+  else
+    dst_dir="$TARGET/$kind"
+    label="$kind"
+  fi
   [ -d "$src_dir" ] || return 0
   mkdir -p "$dst_dir"
   for path in "$src_dir"/*; do
@@ -51,31 +59,31 @@ copy_tree() {
     name=$(basename "$path")
     dest="$dst_dir/$name"
     if [ -e "$dest" ] && [ "$FORCE" -ne 1 ]; then
-      echo "Skip existing $kind/$name (use --force to overwrite)"
+      echo "Skip existing $label/$name (use --force to overwrite)"
       continue
     fi
     rm -rf "$dest"
     cp -R "$path" "$dest"
-    echo "Installed $kind/$name"
+    echo "Installed $label/$name"
   done
 }
 
-copy_tree skills
-copy_tree agents
-copy_tree commands
-copy_tree profile
+copy_tree skills 1
+copy_tree agents 1
+copy_tree commands 1
+copy_tree profile 0
 
-# Ensure project has a linker (ROOT = scripts/..)
-mkdir -p "$TARGET/scripts"
-if [ ! -f "$TARGET/scripts/link.sh" ] || [ "$FORCE" -eq 1 ]; then
-  cp "$KIT_ROOT/core/scripts/link.sh" "$TARGET/scripts/link.sh"
-  chmod +x "$TARGET/scripts/link.sh"
-  echo "Installed scripts/link.sh"
+# Ensure project has a linker at .agents/scripts/link.sh
+mkdir -p "$TARGET/.agents/scripts"
+if [ ! -f "$TARGET/.agents/scripts/link.sh" ] || [ "$FORCE" -eq 1 ]; then
+  cp "$KIT_ROOT/core/scripts/link.sh" "$TARGET/.agents/scripts/link.sh"
+  chmod +x "$TARGET/.agents/scripts/link.sh"
+  echo "Installed .agents/scripts/link.sh"
 fi
 chmod +x "$KIT_ROOT/core/scripts/link.sh" "$KIT_ROOT/core/scripts/install-into.sh" 2>/dev/null || true
 
 if [ "$DO_LINK" -eq 1 ]; then
-  (cd "$TARGET" && sh scripts/link.sh)
+  (cd "$TARGET" && sh .agents/scripts/link.sh)
 fi
 
 echo "Done. Pack '$PACK' → $TARGET"

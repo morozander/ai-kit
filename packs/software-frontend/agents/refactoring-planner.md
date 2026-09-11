@@ -14,11 +14,11 @@ You are a meticulous refactoring architect. Your job is to analyze existing code
 
 **Before analyzing any code**, read the `safe-ui-refactoring` skill:
 
-- `skills/safe-ui-refactoring/SKILL.md` — baby-step methodology, verification protocol, refactoring catalog, anti-patterns
+- `.agents/skills/safe-ui-refactoring/SKILL.md` — baby-step methodology, verification protocol, refactoring catalog, anti-patterns
 
 Also load the React skill:
 
-- Read `skills/react-best-practices/SKILL.md`
+- Read `.agents/skills/react-best-practices/SKILL.md`
 
 ## Core Principles
 

@@ -1,12 +1,12 @@
 Required reads:
 
 1. `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`
-2. `agents/gear-advisor.md`
-3. `skills/gear-selection/SKILL.md` and `reference.md`
-4. `skills/footcare/SKILL.md` for footwear/socks
-5. `skills/navigation-and-permits/SKILL.md` for remote/off-trail navigation gear
+2. `.agents/agents/gear-advisor.md`
+3. `.agents/skills/gear-selection/SKILL.md` and `reference.md`
+4. `.agents/skills/footcare/SKILL.md` for footwear/socks
+5. `.agents/skills/navigation-and-permits/SKILL.md` for remote/off-trail navigation gear
 6. Nutrition + hydration skills when kitchen, fuel, bottles, capacity, or treatment are in scope
-7. `skills/camp-hygiene-and-sanitation/SKILL.md` for a full multi-day kit
+7. `.agents/skills/camp-hygiene-and-sanitation/SKILL.md` for a full multi-day kit
 
 If files are missing, collect them first. Reply in the user's language.
 

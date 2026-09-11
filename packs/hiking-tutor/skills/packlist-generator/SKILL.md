@@ -9,13 +9,13 @@ Always reply in the language the user writes in.
 
 Read profile and trip-params, then load:
 
-- `skills/gear-selection/SKILL.md` (+ reference if needed)
-- `skills/nutrition-planning/SKILL.md` (food weight from duration)
-- `skills/hydration-and-water-treatment/SKILL.md`
-- `skills/footcare/SKILL.md`
-- `skills/risk-and-safety/SKILL.md`
-- `skills/navigation-and-permits/SKILL.md`
-- `skills/camp-hygiene-and-sanitation/SKILL.md`
+- `.agents/skills/gear-selection/SKILL.md` (+ reference if needed)
+- `.agents/skills/nutrition-planning/SKILL.md` (food weight from duration)
+- `.agents/skills/hydration-and-water-treatment/SKILL.md`
+- `.agents/skills/footcare/SKILL.md`
+- `.agents/skills/risk-and-safety/SKILL.md`
+- `.agents/skills/navigation-and-permits/SKILL.md`
+- `.agents/skills/camp-hygiene-and-sanitation/SKILL.md`
 
 Do not emit a list until those constraints are applied. Mark every line **owned** vs **buy/borrow** from `gear_owned`.
 

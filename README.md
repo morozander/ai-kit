@@ -31,9 +31,9 @@ sh core/scripts/install-into.sh --target /path/to/project --pack software-fronte
 sh core/scripts/install-into.sh --target /path/to/project --pack hiking-tutor --link
 ```
 
-`--force` overwrites existing names. `--link` runs the project’s `scripts/link.sh` after copy.
+`--force` overwrites existing names. `--link` runs the project’s `.agents/scripts/link.sh` after copy.
 
-Target projects keep **root** `skills/`, `agents/`, `commands/` as source of truth (same model as esc-tutor / bootstrap), not Shield’s `.claude/`-canonical layout.
+Target projects keep **`.agents/skills/`**, **`.agents/agents/`**, **`.agents/commands/`** as source of truth (Cursor loads `.agents/skills/` natively; Claude adapters under `.claude/`), not Shield’s `.claude/`-canonical layout.
 
 ## New empty project
 

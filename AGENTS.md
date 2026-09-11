@@ -35,7 +35,7 @@ docs/
 2. Domain or stack bundles live under `packs/<name>/` with a `pack.yaml`.
 3. Greenfield projects: paste `bootstrap/bootstrap-cursor-claude.md` (filled brief) into an empty folder agent session.
 4. Existing projects: `sh core/scripts/install-into.sh --target <path> --pack <name>`.
-5. Target projects use root `skills/`, `agents/`, `commands/` as source of truth; recreate IDE adapters with the project’s `scripts/link.sh` (or the kit linker after install).
+5. Target projects use `.agents/skills/`, `.agents/agents/`, `.agents/commands/` as source of truth; recreate IDE adapters with the project’s `.agents/scripts/link.sh` (or the kit linker after install).
 
 ## Hard limits
 
@@ -47,4 +47,4 @@ docs/
 
 ## Recreating adapters (this kit)
 
-From the kit root: `sh core/scripts/link.sh` (links kit-local adapters only if you add kit skills later). For installed projects, run that project’s `scripts/link.sh`.
+From the kit root: `sh core/scripts/link.sh` (links kit-local adapters only if you add kit `.agents/` skills later). For installed projects, run that project’s `.agents/scripts/link.sh`.

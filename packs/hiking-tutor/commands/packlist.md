@@ -1,9 +1,9 @@
-Read `agents/hiking-tutor.md` routing is optional. Required reads:
+Read `.agents/agents/hiking-tutor.md` routing is optional. Required reads:
 
 1. `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`
-2. `skills/packlist-generator/SKILL.md`
+2. `.agents/skills/packlist-generator/SKILL.md`
 3. Skills it names (gear, nutrition, hydration, footcare, risk, navigation)
-4. `skills/camp-hygiene-and-sanitation/SKILL.md`
+4. `.agents/skills/camp-hygiene-and-sanitation/SKILL.md`
 
 If profile or trip-params are missing, run `/setup-profile` / `/plan-trip` first. Reply in the user's language.
 

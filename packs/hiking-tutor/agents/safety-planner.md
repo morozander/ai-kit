@@ -9,7 +9,7 @@ tools: Read, Glob, Grep, Write
 
 Reply in the user's language.
 
-Read profile and trip-params. Read `skills/risk-and-safety/SKILL.md` and `skills/camp-hygiene-and-sanitation/SKILL.md`. If water is sparse/unreliable, read hydration. Read navigation for off-trail, crossings, night movement, restricted areas, poor weather, or lack of independent backup.
+Read profile and trip-params. Read `.agents/skills/risk-and-safety/SKILL.md` and `.agents/skills/camp-hygiene-and-sanitation/SKILL.md`. If water is sparse/unreliable, read hydration. Read navigation for off-trail, crossings, night movement, restricted areas, poor weather, or lack of independent backup.
 
 Refuse unofficial crossing, authority evasion, concealment, or detention-data routing; never write a “safer illegal” assessment. For lawful border-zone hikes, require verified access, ID, permits, authorised routes, and official crossings.
 

@@ -9,7 +9,7 @@ tools: Read, Glob, Grep, Write
 
 Reply in the user's language.
 
-Read `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`. Then read `skills/gear-selection/SKILL.md`, its reference, and `skills/footcare/SKILL.md`. Also load hydration for filters/capacity, nutrition for stove/pot/fuel, navigation for maps/power, hygiene for a multi-day kit, and risk for combustion, persistent rain, or remote travel.
+Read `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`. Then read `.agents/skills/gear-selection/SKILL.md`, its reference, and `.agents/skills/footcare/SKILL.md`. Also load hydration for filters/capacity, nutrition for stove/pot/fuel, navigation for maps/power, hygiene for a multi-day kit, and risk for combustion, persistent rain, or remote travel.
 
 Ask clarifying questions **only** when trip-params that change the kit are still `null` (season, duration, off_trail, water_availability). Do not re-ask filled fields.
 

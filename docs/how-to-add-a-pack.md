@@ -1,6 +1,6 @@
 # How to add a pack
 
-1. Create `packs/<kebab-name>/` with `skills/`, `agents/`, `commands/` as needed (and optional extra dirs like `profile/`).
+1. Create `packs/<kebab-name>/` with `skills/`, `agents/`, `commands/` as needed (and optional extra dirs like `profile/`). Pack sources keep those folder names inside the pack.
 2. Add `pack.yaml`:
 
 ```yaml
@@ -18,7 +18,7 @@ extra_dirs:
 
 3. Skill folders need `SKILL.md` (optional `reference.md` / `examples.md` beside it).
 4. Agent and command files are `*.md` with thin bodies; skills hold the how-to.
-5. Use portable paths: `skills/<name>/SKILL.md` — never `.claude/skills/...`.
+5. In content bodies, use portable **installed** paths: `.agents/skills/<name>/SKILL.md` — never `.claude/skills/...`. Install copies pack `skills|agents|commands` into the target’s `.agents/` tree; `profile/` and other extras stay at the project root.
 6. Install: `sh core/scripts/install-into.sh --target <project> --pack <kebab-name>`.
 
 To extend `core`, add files under `core/` and list them in `core/pack.yaml`.

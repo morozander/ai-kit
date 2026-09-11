@@ -1,11 +1,11 @@
 Required reads:
 
 1. `result/<trip-slug>/hiker-profile.yaml` and `trip-params.yaml`
-2. `agents/safety-planner.md`
-3. `skills/risk-and-safety/SKILL.md`
-4. `skills/hydration-and-water-treatment/SKILL.md` if water is not `frequent`
-5. `skills/navigation-and-permits/SKILL.md` if `region_notes` or `off_trail` suggest it
-6. `skills/camp-hygiene-and-sanitation/SKILL.md`
+2. `.agents/agents/safety-planner.md`
+3. `.agents/skills/risk-and-safety/SKILL.md`
+4. `.agents/skills/hydration-and-water-treatment/SKILL.md` if water is not `frequent`
+5. `.agents/skills/navigation-and-permits/SKILL.md` if `region_notes` or `off_trail` suggest it
+6. `.agents/skills/camp-hygiene-and-sanitation/SKILL.md`
 
 If files are missing, collect them first. Reply in the user's language.
 

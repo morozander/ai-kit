@@ -44,7 +44,7 @@ Size the pack from tested equipment bulk, food, fuel, and maximum water capacity
 
 - Off-trail + heavy pack: err toward more protection, not max cushion road shoes.
 - Poles: strongly recommended for `elevation_gain_m` high, descents, river crossings, veg. Collapsible for travel.
-- Do not recommend a new boot model as “the one” — recommend **category** (trail shoe vs mid boot) and fit rules; send details to `skills/footcare/SKILL.md`.
+- Do not recommend a new boot model as “the one” — recommend **category** (trail shoe vs mid boot) and fit rules; send details to `.agents/skills/footcare/SKILL.md`.
 
 ## What not to do
 

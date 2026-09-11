@@ -38,7 +38,7 @@ Have a **bad-weather alternative**: lower route, extra food, extra layer, earlie
 ## Stove, sanitation, and water failure
 
 - Never operate a stove in a tent, bivy, or enclosed vestibule; assess CO, fire, stability, and fuel leaks.
-- Read `skills/camp-hygiene-and-sanitation/SKILL.md` for waste and contamination controls.
+- Read `.agents/skills/camp-hygiene-and-sanitation/SKILL.md` for waste and contamination controls.
 - Abort or change route if treatment capacity is lost and safe water/resupply is not assured.
 
 ## Animals and dogs

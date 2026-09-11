@@ -1,9 +1,9 @@
 #!/bin/sh
-# Recreate relative IDE adapters for a project with root skills/agents/commands.
-# Install this file as <project>/scripts/link.sh then run: sh scripts/link.sh
+# Recreate relative IDE adapters for a project with .agents/skills|agents|commands.
+# Install this file as <project>/.agents/scripts/link.sh then run: sh .agents/scripts/link.sh
 # Optional env: SKILLS AGENTS COMMANDS (space/newline-separated). Else discover dirs.
 set -e
-ROOT="$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)"
+ROOT="$(CDPATH= cd -- "$(dirname "$0")/../.." && pwd)"
 cd "$ROOT"
 
 discover() {
@@ -18,33 +18,33 @@ discover() {
 }
 
 if [ -z "${SKILLS:-}" ]; then
-  SKILLS=$(discover skills)
+  SKILLS=$(discover .agents/skills)
 fi
 if [ -z "${AGENTS:-}" ]; then
-  AGENTS=$(discover agents)
+  AGENTS=$(discover .agents/agents)
 fi
 if [ -z "${COMMANDS:-}" ]; then
-  COMMANDS=$(discover commands)
+  COMMANDS=$(discover .agents/commands)
 fi
 
 mkdir -p .claude/skills .claude/agents .claude/commands
-mkdir -p .cursor/skills .cursor/commands
+mkdir -p .cursor/commands
 
 for name in $SKILLS; do
-  [ -d "skills/$name" ] || continue
-  ln -sfn ../../skills/"$name" .claude/skills/"$name"
-  ln -sfn ../../skills/"$name" .cursor/skills/"$name"
+  [ -d ".agents/skills/$name" ] || continue
+  # Claude Code only — Cursor loads .agents/skills/ natively
+  ln -sfn ../../.agents/skills/"$name" .claude/skills/"$name"
 done
 
 for name in $AGENTS; do
-  [ -f "agents/$name.md" ] || continue
-  ln -sfn ../../agents/"$name".md .claude/agents/"$name".md
+  [ -f ".agents/agents/$name.md" ] || continue
+  ln -sfn ../../.agents/agents/"$name".md .claude/agents/"$name".md
 done
 
 for name in $COMMANDS; do
-  [ -f "commands/$name.md" ] || continue
-  ln -sfn ../../commands/"$name".md .claude/commands/"$name".md
-  ln -sfn ../../commands/"$name".md .cursor/commands/"$name".md
+  [ -f ".agents/commands/$name.md" ] || continue
+  ln -sfn ../../.agents/commands/"$name".md .claude/commands/"$name".md
+  ln -sfn ../../.agents/commands/"$name".md .cursor/commands/"$name".md
 done
 
 if [ -e CLAUDE.md ] && [ ! -L CLAUDE.md ]; then
