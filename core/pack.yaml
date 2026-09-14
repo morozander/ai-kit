@@ -6,6 +6,12 @@ skills:
   - writing-plans
   - systematic-debugging
   - meta-task-observer
+  - domain-modeling
+  - codebase-design
+  - grill-with-docs
+  - grilling
+  - resolving-merge-conflicts
+  - tdd
 agents:
   - requirements-planner
   - plan-verifier
