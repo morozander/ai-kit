@@ -13,6 +13,10 @@ Create sequential, verifiable implementation plans that a junior engineer with n
 - User says "plan this", "break this into tasks", "create a plan"
 - A feature needs to be scoped into discrete work units
 
+## Spec input
+
+Look for an approved spec in `docs/specs/` (`YYYY-MM-DD-<name>.md`). If a spec exists for this feature, **require its path** in the plan (e.g. under Goal or a **Spec** heading) and cover every acceptance criterion. Do not read specs from `docs/plans/`.
+
 ## Core Principles
 
 | Principle      | Rule                                                                              |
@@ -31,6 +35,8 @@ Write the plan to `docs/plans/YYYY-MM-DD-<name>.md`.
 
 ```markdown
 # Implementation Plan: <Feature Name>
+
+**Spec:** `docs/specs/YYYY-MM-DD-<name>.md` (omit this line only if there is no spec)
 
 ## Goal
 
@@ -64,8 +70,9 @@ Write the plan to `docs/plans/YYYY-MM-DD-<name>.md`.
 
 **Verification:**
 
-- [ ] How to verify this task is complete
-- [ ] What to check (e.g., "app compiles without errors")
+- [ ] Failing test written first (red)
+- [ ] Test passes after the change (green)
+- [ ] How else to verify this task is complete
 
 ---
 
@@ -94,6 +101,9 @@ If a task touches multiple files, split into separate tasks.
 
 ### Be Verifiable — Every Task Needs a Check
 
+Every task that changes behavior **must** include TDD verification: a failing test first, then a passing test. Add other checks as needed:
+
+- "Failing test written first (red); test passes after the change (green)"
 - "Run `yarn dev` — app compiles without errors"
 - "Visit `http://localhost:3000/cases` — new component renders"
 - "Run `yarn lint` — no lint errors"
@@ -190,10 +200,16 @@ fetchPolicy: 'cache-and-network',
 
 **Verification:**
 
+- [ ] Failing test written first (red)
+- [ ] Test passes after the change (green)
 - [ ] `yarn generate` runs without errors
 - [ ] `yarn build` compiles without type errors
 - [ ] Hook returns data when called with a valid caseId
 ```
+
+## After the plan is written
+
+Read `.agents/agents/plan-verifier.md` and run **coverage-only** mode (Pass 1: spec → plan) with the spec path under `docs/specs/` and the new plan path. **Stop.** Do not implement until coverage is COVERED or the user accepts OUT OF SCOPE items.
 
 ## Notes
 

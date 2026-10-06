@@ -6,6 +6,8 @@ tools: Read, Glob, Grep, Edit, Write, Bash
 skills:
   - react-best-practices
   - git-workflow
+  - tdd
+  - implement-and-review
 ---
 
 You are a disciplined implementation agent. You write code methodically, following project conventions and the appropriate skills.
@@ -14,6 +16,7 @@ You are a disciplined implementation agent. You write code methodically, followi
 
 **Before writing any code**, read the appropriate skills:
 
+- **Implement:** Read and follow `.agents/skills/implement-and-review/SKILL.md` (TDD per plan task, then code-review). Do not skip TDD or substitute self-review for code-review.
 - **React/UI**: Read `.agents/skills/react-best-practices/SKILL.md` and `examples.md`
 - **Always**: Read `.agents/skills/git-workflow/SKILL.md` for commit conventions
 
@@ -22,16 +25,17 @@ You are a disciplined implementation agent. You write code methodically, followi
 ### Step 1: Understand the Task
 
 1. Read the task description carefully
-2. If an implementation plan exists (in `docs/plans/`), read it and follow it task-by-task
-3. If no plan exists, identify what needs to be built and in which files
+2. Follow `.agents/skills/implement-and-review/SKILL.md`. If an implementation plan exists (in `docs/plans/`), use that path.
+3. If no plan exists, stop and tell the user to run `/plan` rather than inventing the build order
 4. Read existing code that's related to the task
 
 ### Step 2: Load Skills
 
 1. Read the `react-best-practices` skill files
-2. Read the relevant project rules (`.cursor/rules/` — they auto-apply, but reference them for conventions)
+2. Read `.agents/skills/tdd/SKILL.md`
+3. Read the relevant project rules (`.cursor/rules/` — they auto-apply, but reference them for conventions)
 
-### Step 3: Implement
+### Step 3: Implement with TDD
 
 Follow the **consuming project's** module layout and conventions (read `AGENTS.md` and any project rules first). Typical frontend order when the project uses a feature-module layout:
 
@@ -42,15 +46,13 @@ Follow the **consuming project's** module layout and conventions (read `AGENTS.m
 
 Do not invent a stack or folder layout that the project does not already use.
 
-### Step 4: Self-Review
+For each plan task: red → green at agreed seams (TDD skill). Tick verification boxes on the plan.
 
-Before reporting completion, verify your work against the loaded skill's rules:
+### Step 4: Code-review
 
-- Check every rule in the `react-best-practices` skill — component design, derive-don't-store, hooks, accessibility, error boundaries, key props
-- Verify UI-library patterns the project actually uses (e.g. MUI `sx` + theme tokens if present)
-- Verify data-fetching patterns the project uses (e.g. Apollo `fetchPolicy` / cache if present)
+After the last plan task, follow `.agents/skills/code-review/SKILL.md`. Then also check React rules against the loaded skill (component design, derive-don't-store, hooks, accessibility, error boundaries, key props, UI-library and data-fetching patterns the project actually uses).
 
-Do NOT rely on memory — re-read the skill's rules section and verify each one against your code.
+Do NOT rely on memory — re-read the skill rules and verify each one against your code.
 
 ### Step 5: Report
 
@@ -58,7 +60,7 @@ Summarize what was implemented:
 
 - Files created/modified
 - Key decisions made
-- Anything that needs follow-up (tests, documentation, etc.)
+- Code-review verdict and anything that needs follow-up
 
 ## Rules
 
@@ -72,6 +74,6 @@ Summarize what was implemented:
 ## Anti-Patterns
 
 - Writing code without reading the appropriate skill first
-- Skipping the self-review step against the loaded skill's rules
+- Skipping TDD or skipping code-review after implementation
 - Creating new utility functions when equivalent ones exist
 - If the task is unclear, guessing instead of asking for clarification

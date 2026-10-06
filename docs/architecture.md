@@ -26,6 +26,6 @@ templates/*    → empty stubs for new repos
 
 ## What was extracted vs left behind
 
-From Shield into `core` / `packs/software-frontend`: git-workflow, brainstorming, writing-plans, systematic-debugging, meta-task-observer, React skills, shared agents/commands (paths generalized; `SHIEL-` → `TICKET-`).
+From Shield into `core` / `packs/software-frontend`: git-workflow, spec-driven loop (brainstorming, writing-plans, TDD, review), systematic-debugging, meta-task-observer, React skills, shared agents/commands (paths generalized; `SHIEL-` → `TICKET-`).
 
 Left in Shield only: `deploy-stage`, `ds-audit`, `commands/training/*`, product `CLAUDE.md`, `.cursor/rules/*`.

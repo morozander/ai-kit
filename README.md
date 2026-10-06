@@ -8,7 +8,7 @@ Portable Cursor + Claude Code kit: reusable skills, agents, commands, scripts, a
 |------|---------|
 | [AGENTS.md](AGENTS.md) | Kit maintenance instructions (edit this only for root context) |
 | [bootstrap/bootstrap-cursor-claude.md](bootstrap/bootstrap-cursor-claude.md) | Paste into an agent in an empty folder to scaffold a project |
-| [core/](core/) | Shared git/plan/debug skills, commands, agents |
+| [core/](core/) | Shared git/plan/debug skills, commands, agents. Feature loop: `/feature-dev` (grill spec → `docs/specs/` → plan → verify → TDD → review) |
 | [packs/software-frontend/](packs/software-frontend/) | React-oriented skills and agents |
 | [packs/hiking-tutor/](packs/hiking-tutor/) | Hiking coach domain pack (from esc-tutor) |
 | [templates/](templates/) | Minimal project stubs |

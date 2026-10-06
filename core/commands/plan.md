@@ -8,11 +8,12 @@ Read and follow the writing-plans skill at `.agents/skills/writing-plans/SKILL.m
 
 The skill will guide you through:
 
-- Understanding the approved design or feature spec
-- Breaking work into 2-5 minute tasks
+- Understanding the approved design and the spec in `docs/specs/`
+- Breaking work into 2-5 minute tasks with TDD verification
 - Specifying exact file paths, code, and verification steps
 - Ordering tasks sequentially with correct dependency order
 - Writing the plan to `docs/plans/`
+- Running plan-verifier coverage-only (Pass 1), then stopping
 
 ## Workflow
 
@@ -20,7 +21,7 @@ The skill will guide you through:
 
 Before writing the plan, understand the full scope:
 
-- Read the approved design, feature spec, or user description thoroughly.
+- Read the approved spec in `docs/specs/` when one exists (required path in the plan). Also read any design under `docs/plans/` or the user description.
 - Explore the existing codebase to identify relevant files, patterns, and conventions.
 - Identify which feature module (`src/features/`) this belongs to, or whether new modules are needed.
 - Check for existing components, hooks, or utilities that can be reused.
@@ -40,7 +41,7 @@ Before finalizing, check every task against these rules:
 - [ ] Has an exact file path
 - [ ] Includes the code to write or change (not vague descriptions)
 - [ ] References existing project patterns where applicable
-- [ ] Has a concrete verification step
+- [ ] Has a concrete verification step, including failing test then passing test (TDD) when behavior changes
 - [ ] Is small enough for 2-5 minutes of work
 - [ ] Does not depend on a later task
 
@@ -48,9 +49,13 @@ Before finalizing, check every task against these rules:
 
 Save the plan to `docs/plans/YYYY-MM-DD-<feature-name>.md` using today's date.
 
+### 5. Verify coverage, then stop
+
+Read `.agents/agents/plan-verifier.md` and run **coverage-only** mode (Pass 1: `docs/specs/` → this plan). Do not implement.
+
 ## Important
 
-- Every task **must** have a verification step.
+- Every task **must** have a verification step, including TDD when behavior changes.
 - Tasks should be small enough for 2-5 minutes each.
 - Include exact file paths and code patterns.
 - Reference existing project patterns (e.g., "follow the pattern in `useGetCases.ts`").

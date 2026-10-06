@@ -4,6 +4,11 @@ skills:
   - git-workflow
   - brainstorming
   - writing-plans
+  - writing-specs
+  - grill-spec
+  - feature-dev
+  - implement-and-review
+  - code-review
   - systematic-debugging
   - meta-task-observer
   - domain-modeling
@@ -21,4 +26,7 @@ commands:
   - create-pr
   - brainstorm
   - plan
+  - grill-spec
+  - feature-dev
+  - implement-and-review
   - code-review
