@@ -1,0 +1,25 @@
+name: sdd
+description: Spec-driven development loop (constitution, specify, clarify, plan, tasks, analyze, implement, converge, loop) separate from /feature-dev.
+skills:
+  - sdd-shared
+  - sdd-constitution
+  - sdd-specify
+  - sdd-clarify
+  - sdd-checklist
+  - sdd-plan
+  - sdd-tasks
+  - sdd-analyze
+  - sdd-implement
+  - sdd-converge
+  - sdd-loop
+commands:
+  - sdd-constitution
+  - sdd-specify
+  - sdd-clarify
+  - sdd-checklist
+  - sdd-plan
+  - sdd-tasks
+  - sdd-analyze
+  - sdd-implement
+  - sdd-converge
+  - sdd-loop

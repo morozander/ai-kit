@@ -23,6 +23,7 @@ core/
 packs/
   software-frontend/
   hiking-tutor/
+  sdd/
 templates/
   markdown-coach/
   software-app/

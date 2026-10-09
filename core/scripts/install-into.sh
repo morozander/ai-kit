@@ -4,6 +4,7 @@
 #   sh core/scripts/install-into.sh --target /path/to/project --pack core
 #   sh core/scripts/install-into.sh --target /path/to/project --pack software-frontend
 #   sh core/scripts/install-into.sh --target /path/to/project --pack hiking-tutor --force
+#   sh core/scripts/install-into.sh --target /path/to/project --pack sdd
 #   sh core/scripts/install-into.sh --target /path/to/project --pack core --link
 set -e
 
@@ -14,7 +15,7 @@ FORCE=0
 DO_LINK=0
 
 usage() {
-  echo "Usage: sh core/scripts/install-into.sh --target <dir> --pack <core|software-frontend|hiking-tutor> [--force] [--link]" >&2
+  echo "Usage: sh core/scripts/install-into.sh --target <dir> --pack <core|software-frontend|hiking-tutor|sdd> [--force] [--link]" >&2
   exit 1
 }
 
@@ -34,7 +35,7 @@ TARGET="$(CDPATH= cd -- "$TARGET" && pwd)"
 
 case "$PACK" in
   core) SRC="$KIT_ROOT/core" ;;
-  software-frontend|hiking-tutor) SRC="$KIT_ROOT/packs/$PACK" ;;
+  software-frontend|hiking-tutor|sdd) SRC="$KIT_ROOT/packs/$PACK" ;;
   *) echo "Unknown pack: $PACK" >&2; exit 1 ;;
 esac
 
