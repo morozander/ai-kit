@@ -8,11 +8,12 @@ Portable Cursor + Claude Code kit: reusable skills, agents, commands, scripts, a
 |------|---------|
 | [AGENTS.md](AGENTS.md) | Kit maintenance instructions (edit this only for root context) |
 | [bootstrap/bootstrap-cursor-claude.md](bootstrap/bootstrap-cursor-claude.md) | Paste into an agent in an empty folder to scaffold a project |
-| [core/](core/) | Shared git/plan/debug skills, commands, agents. Feature loop: `/feature-dev` (grill spec → `docs/specs/` → plan → verify → TDD → review) |
+| [core/](core/) | Shared git, debug, and observation skills, plus git slash commands |
+| [packs/workflow-lapa/](packs/workflow-lapa/README.md) | Feature loop: `/feature-dev` (grill spec → `docs/specs/` → plan → verify → TDD → review) |
 | [packs/software-frontend/](packs/software-frontend/) | React-oriented skills and agents |
 | [packs/hiking-tutor/](packs/hiking-tutor/) | Hiking coach domain pack (from esc-tutor) |
 | [packs/sdd/](packs/sdd/README.md) | Spec-driven loop. See the pack README for commands, artifacts, and notes. Separate from `/feature-dev` |
-| [packs/mattpocock-fork/](packs/mattpocock-fork/README.md) | Idea-to-ship engineering and productivity skills. Install beside `core` (`/code-review` stays in `core`). See the pack README |
+| [packs/mattpocock-fork/](packs/mattpocock-fork/README.md) | Idea-to-ship engineering and productivity skills. Install beside `core`. See the pack README |
 | [templates/](templates/) | Minimal project stubs |
 | [docs/](docs/) | Architecture and how to add a pack |
 
@@ -33,6 +34,7 @@ sh core/scripts/install-into.sh --target /path/to/project --pack software-fronte
 sh core/scripts/install-into.sh --target /path/to/project --pack hiking-tutor --link
 sh core/scripts/install-into.sh --target /path/to/project --pack sdd
 sh core/scripts/install-into.sh --target /path/to/project --pack mattpocock-fork
+sh core/scripts/install-into.sh --target /path/to/project --pack workflow-lapa
 ```
 
 `--force` overwrites existing names. `--link` runs the project’s `.agents/scripts/link.sh` after copy.

@@ -2,11 +2,9 @@
 
 Editable copy of the idea-to-ship engineering skills and the productivity skills that sit beside them. Stack-neutral. `skills-main/` in this repo is reference only. It is not installed with the pack. There is no CLI.
 
-Install this pack beside `core`. This pack supplies `tdd`, `grilling`, `grill-with-docs`, `domain-modeling`, and `codebase-design`. `core` supplies `/code-review`. There is no shared skill name, so you do not need `--force`.
+Install this pack beside `core`. This pack supplies `tdd`, `grilling`, `grill-with-docs`, `domain-modeling`, and `codebase-design`. There is no shared skill name with `core`, so you do not need `--force`.
 
-`/feature-dev`, `/implement-and-review`, and `/grill-spec` (from `core`) need this pack for `tdd` and grilling. `/implement` and `/implement-spec` need `core` for `/code-review`.
-
-`/feature-dev` still writes `docs/specs/` and `docs/plans/`. This pack writes `GLOSSARY.md`, `docs/adr/`, `docs/agents/`, and `.scratch/`.
+This pack writes `GLOSSARY.md`, `docs/adr/`, `docs/agents/`, and `.scratch/`.
 
 This README stays in the kit. `install-into.sh` copies skills and commands only; it does not copy this file.
 
@@ -63,5 +61,3 @@ Standalone: /grill-me, /handoff, /teach, /to-questionnaire, /wait-what
 | `research` | Cited notes from primary sources | markdown in the repo |
 | `pr` | Pull request body shape | PR description |
 | `writing-for-agents` | How to write docs agents consume | — |
-
-`/code-review` is not in this pack. It stays in `core`.

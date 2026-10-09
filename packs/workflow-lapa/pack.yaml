@@ -1,0 +1,25 @@
+name: workflow-lapa
+description: Feature loop from grill spec through plan, verification, TDD, and code review.
+skills:
+  - brainstorming
+  - writing-plans
+  - writing-specs
+  - grill-spec
+  - feature-dev
+  - implement-and-review
+  - code-review
+  - tdd
+  - grilling
+  - grill-with-docs
+  - domain-modeling
+  - codebase-design
+agents:
+  - requirements-planner
+  - plan-verifier
+commands:
+  - brainstorm
+  - plan
+  - grill-spec
+  - feature-dev
+  - implement-and-review
+  - code-review

@@ -19,8 +19,8 @@ This kit does **not** adopt that layout for portable packs. Install always write
 
 ```
 bootstrap/     → greenfield paste prompt
-core/          → cross-project software workflow (pack source tree)
-packs/*        → optional domain or stack bundles (pack.yaml)
+core/          → git, debug, and observation skills (pack source tree)
+packs/*        → optional bundles (pack.yaml), including workflow-lapa for the feature loop
 templates/*    → empty stubs for new repos
 ```
 

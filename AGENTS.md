@@ -25,6 +25,7 @@ packs/
   hiking-tutor/
   sdd/
   mattpocock-fork/
+  workflow-lapa/
 templates/
   markdown-coach/
   software-app/
