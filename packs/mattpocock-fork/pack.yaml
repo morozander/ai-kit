@@ -1,0 +1,45 @@
+name: mattpocock-fork
+description: Idea-to-ship engineering and productivity skills (grill, spec, tickets, TDD, triage, wayfinder). Review stays in core.
+skills:
+  - setup-matt-pocock-skills
+  - ask-matt
+  - grill-with-docs
+  - to-spec
+  - to-tickets
+  - implement
+  - implement-spec
+  - triage
+  - wayfinder
+  - improve-codebase-architecture
+  - retro
+  - grill-me
+  - handoff
+  - teach
+  - to-questionnaire
+  - wait-what
+  - grilling
+  - domain-modeling
+  - codebase-design
+  - tdd
+  - diagnosing-bugs
+  - prototype
+  - research
+  - pr
+  - writing-for-agents
+commands:
+  - setup-matt-pocock-skills
+  - ask-matt
+  - grill-with-docs
+  - to-spec
+  - to-tickets
+  - implement
+  - implement-spec
+  - triage
+  - wayfinder
+  - improve-codebase-architecture
+  - retro
+  - grill-me
+  - handoff
+  - teach
+  - to-questionnaire
+  - wait-what

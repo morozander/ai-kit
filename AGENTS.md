@@ -24,6 +24,7 @@ packs/
   software-frontend/
   hiking-tutor/
   sdd/
+  mattpocock-fork/
 templates/
   markdown-coach/
   software-app/

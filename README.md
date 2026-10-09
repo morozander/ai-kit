@@ -12,6 +12,7 @@ Portable Cursor + Claude Code kit: reusable skills, agents, commands, scripts, a
 | [packs/software-frontend/](packs/software-frontend/) | React-oriented skills and agents |
 | [packs/hiking-tutor/](packs/hiking-tutor/) | Hiking coach domain pack (from esc-tutor) |
 | [packs/sdd/](packs/sdd/README.md) | Spec-driven loop. See the pack README for commands, artifacts, and notes. Separate from `/feature-dev` |
+| [packs/mattpocock-fork/](packs/mattpocock-fork/README.md) | Idea-to-ship engineering and productivity skills. Install beside `core` (`/code-review` stays in `core`). See the pack README |
 | [templates/](templates/) | Minimal project stubs |
 | [docs/](docs/) | Architecture and how to add a pack |
 
@@ -31,6 +32,7 @@ sh core/scripts/install-into.sh --target /path/to/project --pack core
 sh core/scripts/install-into.sh --target /path/to/project --pack software-frontend
 sh core/scripts/install-into.sh --target /path/to/project --pack hiking-tutor --link
 sh core/scripts/install-into.sh --target /path/to/project --pack sdd
+sh core/scripts/install-into.sh --target /path/to/project --pack mattpocock-fork
 ```
 
 `--force` overwrites existing names. `--link` runs the project’s `.agents/scripts/link.sh` after copy.
