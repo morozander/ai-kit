@@ -17,19 +17,46 @@ You maintain this kit. Prefer small, focused changes. Do not invent product stac
 
 ```
 AGENTS.md                         ← this file (master)
-bootstrap/bootstrap-cursor-claude.md
+CHANGELOG.md                      ← version history
+bootstrap/
+  bootstrap-cursor-claude.md      ← paste into an empty folder to scaffold
 core/
-  skills/ agents/ commands/ scripts/
+  skills/                         ← shared workflow skills
+    git-workflow/
+    systematic-debugging/
+    meta-task-observer/
+    resolving-merge-conflicts/
+    grilling/                     ← consolidated from packs
+    grill-with-docs/
+    tdd/
+    domain-modeling/
+    codebase-design/
+    code-review/
+  commands/                       ← git slash commands
+  scripts/
+    install-into.sh
+    link.sh
+    validate-pack.sh
+  pack.yaml
 packs/
-  software-frontend/
-  hiking-tutor/
-  sdd/
-  mattpocock-fork/
-  workflow-lapa/
+  software-frontend/              ← React skills and agents
+    skills/ agents/ pack.yaml README.md
+  hiking-tutor/                   ← domain pack with profile/
+    skills/ agents/ commands/ profile/ pack.yaml
+  sdd/                            ← spec-driven loop
+    skills/ commands/ pack.yaml README.md
+  mattpocock-fork/                ← idea-to-ship skills
+    skills/ commands/ pack.yaml README.md
+  workflow-lapa/                  ← feature loop
+    skills/ agents/ commands/ pack.yaml README.md
 templates/
-  markdown-coach/
-  software-app/
+  markdown-coach/                 ← includes working /review example
+    .agents/ AGENTS.md.stub README.md
+  software-app/                   ← includes working /setup example
+    .agents/ AGENTS.md.stub README.md
 docs/
+  architecture.md
+  how-to-add-a-pack.md
 ```
 
 ## How to work
@@ -38,7 +65,17 @@ docs/
 2. Domain or stack bundles live under `packs/<name>/` with a `pack.yaml`.
 3. Greenfield projects: paste `bootstrap/bootstrap-cursor-claude.md` (filled brief) into an empty folder agent session.
 4. Existing projects: `sh core/scripts/install-into.sh --target <path> --pack <name>`.
-5. Target projects use `.agents/skills/`, `.agents/agents/`, `.agents/commands/` as source of truth; recreate IDE adapters with the project’s `.agents/scripts/link.sh` (or the kit linker after install).
+5. Target projects use `.agents/skills/`, `.agents/agents/`, `.agents/commands/` as source of truth; recreate IDE adapters with the project's `.agents/scripts/link.sh` (or the kit linker after install).
+6. Validate changes with `sh core/scripts/validate-pack.sh`.
+
+## Pack dependencies
+
+Some packs depend on `core` for shared skills:
+- `workflow-lapa` → requires grilling, tdd, domain-modeling, codebase-design, code-review from core
+- `mattpocock-fork` → requires grilling, tdd, domain-modeling, codebase-design, code-review from core
+- `software-frontend` → requires tdd, code-review from core
+
+Install `core` first when using these packs.
 
 ## Hard limits
 
@@ -50,4 +87,4 @@ docs/
 
 ## Recreating adapters (this kit)
 
-From the kit root: `sh core/scripts/link.sh` (links kit-local adapters only if you add kit `.agents/` skills later). For installed projects, run that project’s `.agents/scripts/link.sh`.
+From the kit root: `sh core/scripts/link.sh` (links kit-local adapters only if you add kit `.agents/` skills later). For installed projects, run that project's `.agents/scripts/link.sh`.

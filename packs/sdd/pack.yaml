@@ -1,4 +1,5 @@
 name: sdd
+version: 1.0.0
 description: Spec-driven development loop (constitution, specify, clarify, plan, tasks, analyze, implement, converge, loop) separate from /feature-dev.
 skills:
   - sdd-shared

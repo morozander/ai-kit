@@ -2,6 +2,8 @@
 
 Fill **Project brief**, then send this entire file to an agent in an **empty folder**. The agent creates the repo layout. It must not invent a product, stack, UI, or domain facts that are not in the brief.
 
+**For working examples of the result**, see `templates/markdown-coach/` (document review coach) or `templates/software-app/` (software project starter) in the ai-kit repository.
+
 ---
 
 ## Project brief (you fill this)

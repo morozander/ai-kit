@@ -15,9 +15,10 @@ TARGET=""
 PACK=""
 FORCE=0
 DO_LINK=0
+SKIP_VALIDATE=0
 
 usage() {
-  echo "Usage: sh core/scripts/install-into.sh --target <dir> --pack <core|software-frontend|hiking-tutor|sdd|mattpocock-fork|workflow-lapa> [--force] [--link]" >&2
+  echo "Usage: sh core/scripts/install-into.sh --target <dir> --pack <core|software-frontend|hiking-tutor|sdd|mattpocock-fork|workflow-lapa> [--force] [--link] [--skip-validate]" >&2
   exit 1
 }
 
@@ -27,6 +28,7 @@ while [ $# -gt 0 ]; do
     --pack) PACK=$2; shift 2 ;;
     --force) FORCE=1; shift ;;
     --link) DO_LINK=1; shift ;;
+    --skip-validate) SKIP_VALIDATE=1; shift ;;
     -h|--help) usage ;;
     *) echo "Unknown arg: $1" >&2; usage ;;
   esac
@@ -42,6 +44,25 @@ case "$PACK" in
 esac
 
 [ -f "$SRC/pack.yaml" ] || { echo "Missing pack.yaml in $SRC" >&2; exit 1; }
+
+# Validate pack before installing (unless --skip-validate)
+if [ "$SKIP_VALIDATE" -ne 1 ]; then
+  echo "Validating pack '$PACK'..."
+  if ! sh "$KIT_ROOT/core/scripts/validate-pack.sh" --pack "$PACK" 2>&1 | grep -v "^INFO:"; then
+    echo "Pack validation failed. Use --skip-validate to install anyway." >&2
+    exit 1
+  fi
+fi
+
+# Check for dependencies
+if grep -q "^depends_on:" "$SRC/pack.yaml"; then
+  deps=$(awk '/^depends_on:/{found=1;next} found && /^  - /{gsub(/^  - /,"");print} found && /^[a-z]/{exit}' "$SRC/pack.yaml")
+  for dep in $deps; do
+    if [ ! -d "$TARGET/.agents/skills" ] || [ -z "$(ls -A "$TARGET/.agents/skills" 2>/dev/null)" ]; then
+      echo "Note: Pack '$PACK' depends on '$dep'. Consider installing '$dep' first."
+    fi
+  done
+fi
 
 # skills | agents | commands → .agents/<kind>; profile and other extras → project root
 copy_tree() {

@@ -1,9 +1,11 @@
 name: mattpocock-fork
+version: 1.0.0
 description: Idea-to-ship engineering and productivity skills (grill, spec, tickets, TDD, triage, wayfinder).
+depends_on:
+  - core
 skills:
   - setup-matt-pocock-skills
   - ask-matt
-  - grill-with-docs
   - to-spec
   - to-tickets
   - implement
@@ -17,10 +19,6 @@ skills:
   - teach
   - to-questionnaire
   - wait-what
-  - grilling
-  - domain-modeling
-  - codebase-design
-  - tdd
   - diagnosing-bugs
   - prototype
   - research
@@ -43,3 +41,4 @@ commands:
   - teach
   - to-questionnaire
   - wait-what
+  - code-review

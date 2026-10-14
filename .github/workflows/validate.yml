@@ -1,0 +1,86 @@
+name: Validate Kit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate pack.yaml files against actual content
+        run: sh core/scripts/validate-pack.sh
+
+      - name: Check symlinks
+        run: |
+          echo "Checking CLAUDE.md symlink..."
+          if [ -L CLAUDE.md ]; then
+            target=$(readlink CLAUDE.md)
+            if [ "$target" != "AGENTS.md" ]; then
+              echo "ERROR: CLAUDE.md should point to AGENTS.md, not $target"
+              exit 1
+            fi
+            echo "OK: CLAUDE.md -> AGENTS.md"
+          else
+            echo "ERROR: CLAUDE.md is not a symlink"
+            exit 1
+          fi
+          
+          echo "Checking .cursorrules symlink..."
+          if [ -L .cursorrules ]; then
+            target=$(readlink .cursorrules)
+            if [ "$target" != "AGENTS.md" ]; then
+              echo "ERROR: .cursorrules should point to AGENTS.md, not $target"
+              exit 1
+            fi
+            echo "OK: .cursorrules -> AGENTS.md"
+          else
+            echo "ERROR: .cursorrules is not a symlink"
+            exit 1
+          fi
+
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Lint shell scripts
+        run: |
+          for script in core/scripts/*.sh; do
+            echo "Checking $script..."
+            shellcheck -S warning "$script"
+          done
+
+      - name: Validate markdown links in skills
+        run: |
+          errors=0
+          for skill_file in core/skills/*/SKILL.md packs/*/skills/*/SKILL.md; do
+            [ -f "$skill_file" ] || continue
+            skill_dir=$(dirname "$skill_file")
+            
+            # Extract relative links (not http/https, not anchors, not .agents paths)
+            grep -oE '\]\([^)]+\)' "$skill_file" 2>/dev/null | sed 's/\](//' | sed 's/)$//' | while read -r target; do
+              case "$target" in
+                http://*|https://*|#*|.agents/*|"") continue ;;
+              esac
+              # Only check if it looks like a file path
+              case "$target" in
+                *.*|*/*)
+                  resolved="$skill_dir/$target"
+                  if [ ! -f "$resolved" ] && [ ! -d "$resolved" ]; then
+                    echo "Broken link in $skill_file: $target"
+                    errors=$((errors + 1))
+                  fi
+                  ;;
+              esac
+            done
+          done
+          
+          if [ "$errors" -gt 0 ]; then
+            echo "Found $errors broken links"
+            exit 1
+          fi
+          echo "All skill reference links OK"
