@@ -1,5 +1,8 @@
 name: software-frontend
+version: 1.0.0
 description: React-oriented skills and agents for SPA frontends (best practices, safe UI refactor, unit tests, implementor/reviewer/refactor planner).
+depends_on:
+  - core
 skills:
   - react-best-practices
   - safe-ui-refactoring

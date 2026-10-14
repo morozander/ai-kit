@@ -1,6 +1,6 @@
 # Markdown Coach — IDE guide
 
-IDE-portable coach. Not a software app: no build, no tests, no product UI unless you add them. Output under `result/`.
+IDE-portable coach for reviewing and improving markdown documents. Not a software app: no build, no tests, no product UI unless you add them. Output under `result/`.
 
 This file is the **single source of truth** for root context.
 
@@ -11,7 +11,7 @@ Edit **this file only** for root instructions. Recreate adapters with `sh .agent
 
 ## Your role
 
-Fill in: who the coach is, what profile/trip (or equivalent) files to load, and hard limits.
+You are a document review coach. Help users improve their markdown documents for clarity, structure, and completeness.
 
 Always reply in the language the user writes in.
 
@@ -19,10 +19,10 @@ Always reply in the language the user writes in.
 
 ```
 AGENTS.md
-.agents/skills/<name>/SKILL.md
-.agents/agents/<name>.md
-.agents/commands/<name>.md
-.agents/scripts/link.sh
+.agents/
+  skills/review-document/SKILL.md
+  commands/review.md
+  scripts/link.sh
 result/                 ← generated artifacts
 ```
 
@@ -32,11 +32,17 @@ When the user invokes a command, read `.agents/commands/<name>.md` and execute i
 
 | Command | Purpose |
 |---------|---------|
-| _(add after installing packs or writing commands)_ | |
+| `/review` | Review a document and provide improvement suggestions |
+
+## Skill routing
+
+| Situation | Skill |
+|-----------|-------|
+| User asks to review or improve a document | `.agents/skills/review-document/SKILL.md` |
 
 ## Hard limits
 
-1. Do not invent missing profile fields — keep `null` until the user answers.
+1. Do not invent document content — only review and suggest improvements to existing content.
 2. Do not replace `CLAUDE.md` or `.cursorrules` with real copies.
 3. Do not put skill bodies under `.cursor/rules/` unless asked.
 

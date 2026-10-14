@@ -1,0 +1,12 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Shell scripts always use LF
+*.sh text eol=lf
+
+# Markdown files always use LF
+*.md text eol=lf
+
+# YAML files always use LF
+*.yaml text eol=lf
+*.yml text eol=lf

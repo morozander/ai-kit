@@ -1,10 +1,17 @@
 name: core
-description: Shared git conventions, debugging, and session-observation skills.
+version: 1.0.0
+description: Shared git conventions, debugging, session observation, and workflow skills.
 skills:
   - git-workflow
   - systematic-debugging
   - meta-task-observer
   - resolving-merge-conflicts
+  - grilling
+  - grill-with-docs
+  - tdd
+  - domain-modeling
+  - codebase-design
+  - code-review
 commands:
   - commit
   - create-branch

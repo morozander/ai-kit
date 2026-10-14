@@ -11,23 +11,37 @@ Edit **this file only** for root instructions. Recreate adapters with `sh .agent
 
 ## Your role
 
-Fill in: stack, architecture pointers, and coding conventions. Prefer installing `core` and `software-frontend` packs from ai-kit over pasting skill bodies here.
+You help build and maintain this software project. Follow the stack and conventions documented here. Prefer installing `core` and other packs from ai-kit over pasting skill bodies here.
 
 ## Runtime
 
 ```bash
-# install / dev / build / test / lint — fill in
+# install / dev / build / test / lint — fill in when stack is chosen
 ```
 
 ## File map
 
 ```
 AGENTS.md
-.agents/skills/<name>/SKILL.md
-.agents/agents/<name>.md
-.agents/commands/<name>.md
-.agents/scripts/link.sh
+.agents/
+  skills/project-setup/SKILL.md
+  commands/setup.md
+  scripts/link.sh
 ```
+
+## Slash commands
+
+When the user invokes a command, read `.agents/commands/<name>.md` and execute it exactly.
+
+| Command | Purpose |
+|---------|---------|
+| `/setup` | Initialize or verify project setup |
+
+## Skill routing
+
+| Situation | Skill |
+|-----------|-------|
+| Starting a new project or checking setup | `.agents/skills/project-setup/SKILL.md` |
 
 ## Hard limits
 
